@@ -1,7 +1,6 @@
 <?php
 
 /**
- * @var array $product The test variable
  * @var $model \app\models\Product
  */
 
@@ -23,7 +22,4 @@
   <hr>
 <?= \yii\widgets\DetailView::widget(['model' => $model]) ?>
 <hr>
-<?php foreach ($product as $key => $item) : ?>
-  <div><?=$key ?>: <?= $item ?></div>
-<?php endforeach; ?>
 
