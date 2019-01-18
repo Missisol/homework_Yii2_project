@@ -15,12 +15,13 @@ class TestController extends Controller
 //    $model->category = 'hardware';
     $model->price = '500';
 
-    return \Yii::$app->test->run();
+    $data = \Yii::$app->test->run();
 
 
 
-//      return $this->render('index', [
-//        'model' => $model,
-//      ]);
+      return $this->render('index', [
+        'model' => $model,
+        'data' => $data,
+      ]);
   }
 }
