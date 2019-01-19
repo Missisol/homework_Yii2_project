@@ -10,18 +10,24 @@ use yii\widgets\ActiveForm;
 
 <div class="product-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+  <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+  <?= $form->field($model, 'name')->textInput(['maxlength' => true])
+    ->dropDownList([
+      '111' => 'первый',
+      '222' => 'второй',
+      '333' => 'третий'
+    ])->hint('Выберите одно из предложенных значений')
+  ?>
 
-    <?= $form->field($model, 'price')->textInput(['maxlength' => true]) ?>
+  <?= $form->field($model, 'price')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'created_at')->textInput() ?>
+  <?= $form->field($model, 'created_at')->textInput() ?>
 
-    <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
-    </div>
+  <div class="form-group">
+    <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+  </div>
 
-    <?php ActiveForm::end(); ?>
+  <?php ActiveForm::end(); ?>
 
 </div>
