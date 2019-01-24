@@ -29,7 +29,6 @@ class Product extends \yii\db\ActiveRecord
   public function scenarios()
   {
     return [
-      self::SCENARIO_DEFAULT => ['!name', 'id', 'price', 'created_at'],
       self::SCENARIO_CREATE => ['name', 'price'],
       self::SCENARIO_UPDATE => ['price', 'created_at'],
     ];

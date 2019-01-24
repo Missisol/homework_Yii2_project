@@ -22,5 +22,4 @@
   <hr>
 <?= \yii\widgets\DetailView::widget(['model' => $model]) ?>
 <hr>
-<?//= $data ?>
 
